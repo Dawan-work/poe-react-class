@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Counter from "./components/Counter";
 
 export class App extends Component {
   constructor() {
@@ -9,7 +10,7 @@ export class App extends Component {
       lastName: "Onizuka",
       age: 22,
       condition: false,
-      isLogged: false,
+      isLogged: true,
     };
     console.log("constructor called");
   }
@@ -107,6 +108,13 @@ export class App extends Component {
             >
               Changer de nom
             </button>
+
+            <h2 className="font-semibold text-2xl">Les composants</h2>
+            <div className="bg-cyan-200 h-2"></div>
+            <Counter initCounter={0} text="Compteur 1" />
+            <Counter initCounter={2} text="Compteur 2" />
+            <Counter initCounter={3} text="Compteur 3"/>
+            <Counter initCounter={4} text="Compteur 4" />
           </main>
         )}
       </div>
