@@ -18,6 +18,7 @@ export default class Clock extends Component {
 
     componentDidUpdate() {
         console.log("componentDidUpdate");
+
     }
 
     componentWillUnmount() {
