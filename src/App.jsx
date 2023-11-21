@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import SubTitle from "./components/SubTitle";
 import ListRendering from "./components/ListRendering";
 import Form from "./components/Form";
+import Clock from "./components/Clock"
 
 export class App extends Component {
   constructor() {
@@ -152,6 +153,20 @@ export class App extends Component {
 
             <SubTitle title={"Les formulaires"} />
             <Form />
+
+            
+            <SubTitle title={"Cycle de vie du composant"} />
+            <Clock />
+
+            <SubTitle title={"Exercice"} />
+            <ul>
+            <li> <strong>Etape 1 : </strong>Crée un composant gameList avec comme state 5-6 jeux</li>
+            <li> <strong>Etape 2 : </strong>Chaque jeux aura un ID, un nom, une date de sortie (string), une img(string), console, un statue(joué, pas jouer), description</li>
+            <li><strong> Etape 3 :</strong> Crée un sous composant GameCard qui sera le composant pour un jeu unique, en fonction du statue : deux couleurs différentes</li>
+            <li><strong> Etape 4 :</strong>Faire une méthode truncate pour n'afficher que 150 caractères de la description et ajouté "..."</li>
+            <li><strong> Bonus :</strong> lorsque je clique sur un jeu je veux pouvoir inverser son statue et changer la couleur</li>
+          </ul>
+
 
 
           </main>

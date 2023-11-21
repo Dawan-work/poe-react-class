@@ -5,8 +5,6 @@ import './index.css'
 
 // création du virtual DOM
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>,
 )
 
