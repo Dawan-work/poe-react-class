@@ -1,5 +1,8 @@
 import { Component } from "react";
 import Counter from "./components/Counter";
+import SubTitle from "./components/SubTitle";
+import ListRendering from "./components/ListRendering";
+import Form from "./components/Form";
 
 export class App extends Component {
   constructor() {
@@ -11,6 +14,34 @@ export class App extends Component {
       age: 22,
       condition: false,
       isLogged: true,
+      users :[
+        {
+           name: "Eikichi ONIZUKA",
+           age: 22,
+           profession: "Great Teacher"
+        },
+       {
+           name: "Ryuji DANMA",
+           age: 22,
+           profession: "Mechanic"
+         },
+         {
+           name: "Azusa FUYUTSUKI",
+           age: 23,
+           profession: "Teacher"
+         },
+         {
+           name: "Tomoko NOMURA",
+           age: 16,
+           profession: "High School Student"
+         },
+         {
+           name: "Eikichi ONIZUKA",
+           age: 22,
+           profession: "Great Teacher"
+        },
+
+   ] 
     };
     console.log("constructor called");
   }
@@ -109,15 +140,24 @@ export class App extends Component {
               Changer de nom
             </button>
 
-            <h2 className="font-semibold text-2xl">Les composants</h2>
-            <div className="bg-cyan-200 h-2"></div>
+            <SubTitle title={"Les composants"} />
+
             <Counter initCounter={0} text="Compteur 1" />
-            <Counter initCounter={2} text="Compteur 2" />
+            <Counter text="Compteur 2" />
             <Counter initCounter={3} text="Compteur 3"/>
             <Counter initCounter={4} text="Compteur 4" />
+
+            <SubTitle title={"List rendering"} />
+            <ListRendering listUsers={this.state.users} />
+
+            <SubTitle title={"Les formulaires"} />
+            <Form />
+
+
           </main>
         )}
       </div>
     );
   }
 }
+

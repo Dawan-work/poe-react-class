@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
+
+  static defaultProps = {initCounter : 10}
+
   constructor(props) {
     super(props);
-    console.log(this.props);
+    //console.log(this.props);
     this.state = {
       counter: this.props.initCounter,
     };
